@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 33b668fcabed85b1c5a3d73a480447b65dc5604e
 A github finder application designed and built by Okafor Emelder for @altSchoolAfrica second semester examination 2022.
 
 This project is a web application built with Reactjs which displays my personal github profile including details of all my repositories.With this application, users can also search and explore various github profiles on https://github.com/.
