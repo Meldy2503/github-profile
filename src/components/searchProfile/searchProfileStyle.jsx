@@ -106,8 +106,8 @@ export const CardWrapper = styled.div`
   gap: 3rem;
 `;
 export const Card = styled.div`
-  width: 35rem;
-  padding: 3rem 2rem 4rem 2rem;
+  width: 30rem;
+  padding: 2rem 2rem 4rem 2rem;
   background-color: #141b22;
   text-align: center;
   border-radius: 1rem;
@@ -115,7 +115,7 @@ export const Card = styled.div`
   img {
     max-width: 100%;
     border-radius: 50%;
-    width: 20rem;
+    width: 15rem;
     border: 1rem solid #040b11;
   }
 `;

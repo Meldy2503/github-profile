@@ -68,7 +68,9 @@ const SearchProfiles = () => {
                 <img alt="avatar" src={user.avatar_url} />
                 <Text>
                   <h1>{user.login}</h1>
-                  <a href={user.html_url}>View Profile</a>
+                  <a href={user.html_url} target="_blank">
+                    View Profile
+                  </a>
                 </Text>
               </Card>
             );
