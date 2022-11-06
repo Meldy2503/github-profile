@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { BsGlobe, BsLinkedin } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { FaGithub } from "react-icons/fa";
@@ -22,6 +22,7 @@ import {
 const MyProfile = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
     const getProfileInformation = async () => {
@@ -99,7 +100,12 @@ const MyProfile = () => {
                   <GitLink href={`${data.html_url}`} target="_blank">
                     <FaGithub /> View Profile
                   </GitLink>
-                  <RepoLink to="/profile/all-repo">
+                  <RepoLink
+                    to="/profile/all-repo"
+                    onClick={() => {
+                      ref.current?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
                     View All Repositories
                   </RepoLink>
                 </Links>
@@ -108,6 +114,7 @@ const MyProfile = () => {
           )}
         </ProfileContents>
       </Contents>
+      <div ref={ref}></div>
     </Container>
   );
 };
