@@ -10,28 +10,25 @@ import {
 import axios from "axios";
 import Loading from "../Loading";
 import { Helmet } from "react-helmet-async";
-// import { Link } from "react-router-dom";
 
 const SearchProfiles = () => {
   const [input, setInput] = useState("");
   const [userSearch, setUserSearch] = useState([]);
-  const [totalItemCount, setTotalItemCount] = useState([]);
   const [loading, setLoading] = useState(false);
 
   //! SEARCH USER FUNCTION
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      axios
-        .get(`https://api.github.com/search/users?q=${input}`)
-        .then((res) => {
-          setUserSearch(res.data.items);
-          setTotalItemCount(res.data);
-        });
+    try {
+      setLoading(true);
+      const response = await axios.get(
+        `https://api.github.com/search/users?q=${input}`
+      );
+      setUserSearch(response.data.items);
       setLoading(false);
-      console.log(userSearch);
-    }, 1200);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   if (loading) {
@@ -71,8 +68,6 @@ const SearchProfiles = () => {
                 <img alt="avatar" src={user.avatar_url} />
                 <Text>
                   <h1>{user.login}</h1>
-                  {/* <p>{user.location}</p> */}
-                  {/* <a href={`${user.blog}`}>{user.blog}</a> */}
                   <a href={user.html_url}>View Profile</a>
                 </Text>
               </Card>

@@ -1,6 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-// import bgImg from "./src/assets/background-img.jpg";
-// import bgImg from "../assets/background-img.jpg";
 export const GlobalStyle = createGlobalStyle`
 
 *,
@@ -31,15 +29,8 @@ html {
 
   body {
    font-size: 1.6rem;
-   /* background-color: #0f0b29; */
-   background-color: #070522;
-   /* background-color: #06053d; */
-   /* font-family: 'Mulish', sans-serif; */
+   background-color: #040b11;
    font-family: 'Work Sans', sans-serif;
-  
-
-  
- 
   
 }
 

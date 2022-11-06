@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
   width: 100%;
@@ -7,7 +8,7 @@ export const Header = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  /* background-color: #0000004d; */
+  background-color: #040b11;
 `;
 
 export const Nav = styled.nav`
@@ -17,7 +18,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
@@ -31,13 +32,25 @@ export const Nav = styled.nav`
     max-width: 100%;
   }
 `;
-export const Logo = styled.h2``;
+
+export const LogoLink = styled(NavLink)`
+  text-decoration: none;
+  color: #fff;
+  border: 0.2rem solid #1fd37c;
+  padding: 0 1rem;
+  font-family: "Bakbak One", cursive;
+
+  span {
+    color: #1fd37c;
+    font-size: 3rem;
+  }
+`;
 
 export const Ul = styled.ul`
   display: none;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    background-color: #070522;
+    background-color: #040b11;
     width: 100%;
     position: absolute;
     left: 0;
@@ -93,33 +106,30 @@ export const Ul = styled.ul`
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       margin-top: 3rem;
       margin-right: 0;
-      border-bottom: 0.2rem solid #2b2453;
+      border-bottom: 0.2rem solid #767676;
       padding-bottom: 1rem;
     }
   }
 
   .navLink {
-    letter-spacing: 0.1rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
-    color: #c1bbf4;
+    font-family: "Bakbak One", cursive;
+    color: #fff;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
   }
 
   .active {
-    color: #fff;
-    border-bottom: 0.2rem solid #fff;
-    letter-spacing: 0.1rem;
+    color: #1fd37c;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
+    font-family: "Bakbak One", cursive;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
   }
 `;

@@ -6,9 +6,8 @@ const Footer = () => {
     <Container>
       <Contents>
         <p>
-          Designed and built by <span>Emelder Okafor</span>
+          <span>Emelder Okafor</span> &copy;altSchoolAfrica 2022
         </p>
-        <p>&copy; altSchool Africa 2022</p>
       </Contents>
     </Container>
   );

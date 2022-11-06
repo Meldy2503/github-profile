@@ -1,19 +1,29 @@
 import React from "react";
-import { Container, Contents, Row, Left, Right } from "./homeStyle";
-import bgImg from "../../assets/home-img.png";
+import {
+  Container,
+  Contents,
+  Text,
+  Image,
+  Link,
+  SearchLink,
+} from "./homeStyle";
+import bgImg from "../../assets/gif2.gif";
 
 const Home = () => {
   return (
     <Container>
-      <img src={bgImg} alt="home image" />
       <Contents>
-        <Row>
-          <Left>
-            <h1>home</h1>
-          </Left>
-          {/* <Right> */}
-          {/* </Right> */}
-        </Row>
+        <Text>
+          <h1>Welcome to GitHub Finder</h1>
+          <p>Search, Checkout and Explore Github Profiles.</p>
+          <div>
+            <Link to="/profile">View Profile</Link>
+            <SearchLink to="/search-profile">Search Profile</SearchLink>
+          </div>
+        </Text>
+        <Image>
+          <img src={bgImg} alt="gif" />
+        </Image>
       </Contents>
     </Container>
   );

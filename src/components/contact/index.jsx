@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Contents, Form, Btn } from "./contactStyle";
 import { Helmet } from "react-helmet-async";
+import bgImg from "../../assets/star.svg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,18 +23,21 @@ const Contact = () => {
       email: "",
       message: "",
     });
+
     console.log(formData);
   };
-
   return (
     <Container>
+      <img src={bgImg} alt="pattern" />
+      <img src={bgImg} alt="pattern" />
+      <img src={bgImg} alt="pattern" />
       <Contents>
         <Helmet>
           <title>Contact Me</title>
           <meta name="description" content="Contact Me" />
           <link rel="canonical" href="/contact-me" />
         </Helmet>
-        <h2>Get in touch with us</h2>
+        <h2>Get In Touch With Me</h2>
 
         <Form>
           <label htmlFor="name">
@@ -55,7 +59,7 @@ const Contact = () => {
               id={formData.email}
               onChange={handleFormData}
               value={formData.value}
-              placeholder="Enter your emaIL"
+              placeholder="Enter your email"
               required
             />
           </label>

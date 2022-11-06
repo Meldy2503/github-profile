@@ -1,6 +1,6 @@
 import React from "react";
 import { Spin as Hamburger } from "hamburger-react";
-import { Header, Nav, Ul, MenuIcon } from "./navbarStyle";
+import { Header, Nav, Ul, MenuIcon, LogoLink } from "./navbarStyle";
 
 import { NavLink } from "react-router-dom";
 
@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <Header>
       <Nav>
-        <NavLink to="/">
+        <LogoLink to="/">
           <h1>
             G<span>H</span>F
           </h1>
-        </NavLink>
+        </LogoLink>
         <Ul isMenuOpen={isMenuOpen}>
           <li>
             <NavLink
@@ -45,6 +45,15 @@ const Navbar = () => {
               className={(navLink) => (navLink.isActive ? "active" : "navLink")}
             >
               Search Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              onClick={closeMenuLink}
+              to="/error-test"
+              className={(navLink) => (navLink.isActive ? "active" : "navLink")}
+            >
+              Error Test
             </NavLink>
           </li>
           <li>

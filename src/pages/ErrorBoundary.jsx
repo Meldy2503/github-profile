@@ -18,20 +18,27 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <h1
+        <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
             textAlign: "center",
-            color: "#f7992b",
-            backgroundColor: "#090909",
+            backgroundColor: "#040b11",
             height: "100vh",
             width: "100%",
           }}
         >
-          !OOPS&#128543; <br /> Something went wrong.
-        </h1>
+          <h1
+            style={{
+              color: "#d0d0d0",
+              marginBottom: "2rem",
+            }}
+          >
+            !OOPS&#128543; <br /> Something went wrong.
+          </h1>{" "}
+        </div>
       );
     }
     return this.props.children;

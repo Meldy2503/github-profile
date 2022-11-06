@@ -4,54 +4,84 @@ import {
   Contents,
   RepoContainer,
   RepoCard,
+  Links,
 } from "./singleRepoStyle";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-// import { data, price } from "./data";
+import Loading from "../Loading";
+import Icon from "../../assets/star.svg";
+import { FaGithub } from "react-icons/fa";
 
 const SingleRepo = () => {
   const [repos, setRepos] = useState([]);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const params = useParams();
 
   useEffect(() => {
-    const apiCall = setTimeout(() => {
-      // setLoading(true);
-      axios
-        .get(`https://api.github.com/repositories/${params.profileId}`)
-        .then((res) => setRepos(res.data));
-      // setLoading(false);
-    }, 1500);
-    return () => clearTimeout(apiCall);
+    const getSingleRepository = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          `https://api.github.com/repositories/${params.repoId}`
+        );
+        setRepos(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getSingleRepository();
   }, [params]);
 
-  // return (
-  //   <>
-  //     {loading ? (
-  //       <Loading />
-  //     ) : (
-  //       <RepoContainer>
-  //         {repos && (
-  //           <div>
-  //             <p>Name: {repos.name}</p>
-  //             <p>Language: {repos.language}</p>
-  //             <p>Fork Count: {repos.forks}</p>
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Container>
+      <img src={Icon} alt="icon" />
       <Contents>
         <RepoContainer>
           {repos && (
-            <div>
-              <RepoCard>
-                <p>Name: {repos.name}</p>
-                <p>Language: {repos.language}</p>
-                <p>Fork Count: {repos.forks}</p>
-              </RepoCard>
-            </div>
+            <RepoCard>
+              <div>
+                <h2>
+                  Name: <span>{repos.name}</span>
+                </h2>
+                <p>
+                  Size: <span>{repos.size}</span>{" "}
+                </p>
+                <p>
+                  Watchers: <span>{repos.watchers}</span>
+                </p>
+                <p>
+                  Forks Count: <span>{repos.forks_count}</span>
+                </p>
+                <p>
+                  Subscribers Count: <span>{repos.subscribers_count}</span>{" "}
+                </p>
+                <p>
+                  Language: <span>{repos.language}</span>
+                </p>
+                <p>
+                  Default Branch: <span>{repos.default_branch}</span>
+                </p>
+                <p>
+                  Date Created:{" "}
+                  <span>{`${repos.created_at}`.slice(0, 10)}</span>
+                </p>
+              </div>
+              <Links>
+                <a href={`${repos.html_url}`} target="_blank">
+                  <FaGithub />
+                  VIEW REPO
+                </a>
+                <Link to="/profile/all-repo">BACK</Link>
+              </Links>
+            </RepoCard>
           )}
         </RepoContainer>
-        <Link to="/profile/my-profile">back</Link>
       </Contents>
     </Container>
   );

@@ -3,13 +3,13 @@ import { GlobalStyle } from "../GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
 import ErrorBoundary from "./pages/ErrorBoundary";
 import Loading from "./components/Loading";
+import ErrorTest from "./components/ErrorTest";
 
 let Home = lazy(() => import("./pages/Home"));
 let ProfileOutlet = lazy(() => import("./pages/ProfileOutlet"));
-let MyProfile = lazy(() => import("./pages/MyProfile"));
+let GetAllRepo = lazy(() => import("./pages/AllRepos"));
 let GetSingleRepo = lazy(() => import("./pages/SingleRepo"));
 let SearchProfiles = lazy(() => import("./pages/SearchProfiles"));
 let ContactUs = lazy(() => import("./pages/Contact"));
@@ -34,14 +34,14 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<ProfileOutlet />}>
-                <Route path="my-profile" element={<MyProfile />} />
-                <Route path=":profileId" element={<GetSingleRepo />} />
+                <Route path="all-repo" element={<GetAllRepo />} />
+                <Route path=":repoId" element={<GetSingleRepo />} />
               </Route>
+              <Route path="/error-test" element={<ErrorTest />} />
               <Route path="/search-profile" element={<SearchProfiles />} />
               <Route path="/contact-me" element={<ContactUs />} />
               <Route path="*" element={<Error />} />
             </Routes>
-            <Footer />
           </Suspense>
         </ErrorBoundary>
       </ThemeProvider>
