@@ -15,7 +15,7 @@ import {
   Nos,
 } from "./allReposStyle";
 
-const MyProfile = () => {
+const AllRepos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
@@ -120,4 +120,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;
+export default AllRepos;
