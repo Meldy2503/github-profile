@@ -50,7 +50,7 @@ export const Contents = styled.section`
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding: 15rem 0 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,11 +60,14 @@ export const Contents = styled.section`
     width: 95%;
   }
 
-  h1 {
+  & > h1 {
     text-align: center;
-    margin-bottom: 4rem;
     font-size: 4rem;
     font-family: "Bakbak One", cursive;
+  }
+
+  & > h2 {
+    margin-bottom: 5rem;
   }
 `;
 
@@ -87,7 +90,7 @@ export const RepoCard = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     flex-direction: column;
     padding: 3rem 1rem;
   }
@@ -126,6 +129,18 @@ export const RepoCard = styled.div`
     }
   }
 
+  span {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.smobile}) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
   p {
     margin-bottom: 1rem;
     font-size: 1.8rem;
@@ -141,6 +156,10 @@ export const Links = styled(NavLink)`
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 600;
+
+  &:hover {
+    border: 0.2rem solid #fff;
+  }
 
   @media (max-width: 500px) {
     margin-top: 1rem;

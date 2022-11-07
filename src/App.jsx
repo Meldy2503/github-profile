@@ -33,10 +33,9 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/profile" element={<ProfileOutlet />}>
-                <Route path="all-repo" element={<GetAllRepo />} />
-                <Route path=":repoId" element={<GetSingleRepo />} />
-              </Route>
+              <Route path="/profile" element={<ProfileOutlet />} />
+              <Route path="/profile/all-repo" element={<GetAllRepo />} />
+              <Route path="/profile/:repoId" element={<GetSingleRepo />} />
               <Route path="/error-test" element={<ErrorTest />} />
               <Route path="/search-profile" element={<SearchProfiles />} />
               <Route path="/contact-me" element={<ContactUs />} />

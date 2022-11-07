@@ -104,7 +104,7 @@ export const ProfileCard = styled.div`
   padding: 8rem 5rem;
   display: flex;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0) 0px 2px 4px, rgba(0, 0, 0) 0px 7px 15px -5px,
     rgba(0, 0, 0) 0px -3px 0px inset;
@@ -131,7 +131,7 @@ export const ProfileCard = styled.div`
   }
 
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
 
     &::before {
       border-right: 0.5rem solid #21e786;
@@ -175,7 +175,7 @@ export const Text = styled.div`
     margin-top: 3rem;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   p {

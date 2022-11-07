@@ -61,6 +61,7 @@ const AllRepos = () => {
           <link rel="canonical" href="/profile/my-profile" />
         </Helmet>
         <h1>My Repositories</h1>
+        <h2>({repos.length})</h2>
 
         {/* list of repositories */}
         <Repos ref={ref}>
@@ -68,7 +69,10 @@ const AllRepos = () => {
             {repos?.slice(skip, skip + PER_PAGE).map((repo) => (
               <RepoCard key={repo.id}>
                 <p>{repo.name}</p>
-                <Links to={`/profile/${repo.id}`}>view details</Links>
+                <span>
+                  <Links to={`/profile/${repo.id}`}>view details</Links>
+                  <Links to="/profile">back</Links>
+                </span>
               </RepoCard>
             ))}
           </div>

@@ -42,13 +42,11 @@ const SingleRepo = () => {
     <Container>
       <img src={Icon} alt="icon" />
       <Contents>
+        <h2>{repos.name}</h2>
         <RepoContainer>
           {repos && (
             <RepoCard>
               <div>
-                <h2>
-                  Name: <span>{repos.name}</span>
-                </h2>
                 <p>
                   Size: <span>{repos.size}</span>{" "}
                 </p>

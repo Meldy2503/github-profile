@@ -25,10 +25,18 @@ export const Contents = styled.div`
   width: 90%;
   max-width: 120rem;
   margin: 0 auto;
-  padding-bottom: 10rem;
+  padding: 17rem 0 10rem 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
+  }
+
+  & > h2 {
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
   }
 `;
 
@@ -94,15 +102,9 @@ export const RepoCard = styled.div`
     padding: 4rem 1rem;
   }
 
-  h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    color: #1dd17a;
-  }
-
   p {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    line-height: 1.6;
     font-size: 1.8rem;
 
     span {

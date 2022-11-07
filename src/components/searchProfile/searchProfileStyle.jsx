@@ -26,7 +26,7 @@ export const SearchWrapper = styled.div`
       rgb(35, 51, 222, 0.7) -1.34%,
       rgb(10, 190, 102, 0.7)
     );
-  padding: 4rem;
+  padding: 2.5rem 3rem 4.5rem 3rem;
   border-radius: 2rem;
   text-align: center;
 
@@ -57,10 +57,10 @@ export const SearchWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
 
     input {
-      padding: 1.6rem;
+      padding: 1.5rem;
       border: none;
       outline: none;
       font-family: "Mulish", sans-serif;
@@ -79,7 +79,7 @@ export const SearchWrapper = styled.div`
 
     button {
       border-radius: 1rem;
-      padding: 1.58rem 2.6rem;
+      padding: 1.35rem 2.6rem;
       color: #1b1b1b;
       font-size: 1.5rem;
       border: none;
