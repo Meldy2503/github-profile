@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ErrorTest = () => {
   const [errorTest, setErrorTest] = useState(false);
@@ -8,11 +9,11 @@ const ErrorTest = () => {
   };
 
   if (errorTest) {
-    throw Error("!OOPS😟 Something went wrong");
+    throw Error("");
   }
 
   return (
-    <div
+    <motion.div
       style={{
         width: "95%",
         height: "100vh",
@@ -24,6 +25,9 @@ const ErrorTest = () => {
         textAlign: "center",
         margin: "0 auto",
       }}
+      animate={{ scale: 1 }}
+      initial={{ scale: 0 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
     >
       <h2>Click the button below to trigger an error</h2>
       <button
@@ -42,7 +46,7 @@ const ErrorTest = () => {
       >
         Click Me
       </button>
-    </div>
+    </motion.div>
   );
 };
 

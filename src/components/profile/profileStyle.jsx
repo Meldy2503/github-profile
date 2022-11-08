@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   width: 100%;
@@ -13,8 +14,9 @@ export const Container = styled.section`
   & > img {
     max-width: 100%;
     position: absolute;
+    width: 25rem;
     animation: rotate 10s infinite;
-    opacity: 0.1;
+    opacity: 0.08;
     filter: blur(10px);
   }
   @keyframes rotate {
@@ -24,20 +26,16 @@ export const Container = styled.section`
   }
 
   & > img:nth-child(1) {
-    width: 25rem;
     left: 0;
+    top: 15%;
   }
 
   img:nth-child(2) {
-    width: 45rem;
-    top: 15%;
-    left: 0;
+    top: -6%;
     right: 0;
-    margin: 0 auto;
   }
 
   img:nth-child(3) {
-    width: 25rem;
     right: 0;
     bottom: 0;
   }
@@ -76,21 +74,21 @@ export const RepoLink = styled(NavLink)`
   color: #090909;
   display: inline-block;
   text-decoration: none;
-  border-radius: 1rem;
-  padding: 1.3rem 2rem;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.8rem;
   background-color: #4c58db;
 `;
 export const GitLink = styled.a`
   display: flex;
   align-items: center;
   column-gap: 0.7rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: #21e786;
   text-decoration: none;
-  padding: 1.3rem 2rem;
+  padding: 1.1rem 1.8rem;
   color: #090909;
 `;
-export const ProfileContents = styled.div`
+export const ProfileContents = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;

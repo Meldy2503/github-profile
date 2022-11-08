@@ -14,6 +14,7 @@ import {
   Pg,
   Nos,
 } from "./allReposStyle";
+import { motion } from "framer-motion";
 
 const AllRepos = () => {
   const [repos, setRepos] = useState([]);
@@ -60,11 +61,28 @@ const AllRepos = () => {
           <meta name="description" content="Checkout my profile on github" />
           <link rel="canonical" href="/profile/my-profile" />
         </Helmet>
-        <h1>My Repositories</h1>
-        <h2>({repos.length})</h2>
+        <motion.h1
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
+          My Repositories
+        </motion.h1>
+        <motion.h2
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          ({repos.length})
+        </motion.h2>
 
         {/* list of repositories */}
-        <Repos ref={ref}>
+        <Repos
+          ref={ref}
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}
+        >
           <div>
             {repos?.slice(skip, skip + PER_PAGE).map((repo) => (
               <RepoCard key={repo.id}>

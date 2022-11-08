@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Contents, Form, Btn } from "./contactStyle";
 import { Helmet } from "react-helmet-async";
 import bgImg from "../../assets/star.svg";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,9 +38,19 @@ const Contact = () => {
           <meta name="description" content="Contact Me" />
           <link rel="canonical" href="/contact-me" />
         </Helmet>
-        <h2>Get In Touch With Me</h2>
+        <motion.h2
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
+          Get In Touch With Me
+        </motion.h2>
 
-        <Form>
+        <Form
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 1, duration: 1.2 }}
+        >
           <label htmlFor="name">
             <input
               type="text"

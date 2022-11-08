@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   width: 100%;
@@ -9,9 +10,7 @@ export const Container = styled.section`
     max-width: 100%;
     width: 25rem;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 0.1;
+    opacity: 0.08;
     animation: rotate 10s infinite;
     filter: blur(10px);
   }
@@ -19,6 +18,16 @@ export const Container = styled.section`
     100% {
       transform: rotate(360deg);
     }
+  }
+
+  & > img:nth-child(1) {
+    left: 0;
+    bottom: 0;
+  }
+
+  & > img:nth-child(2) {
+    top: 0;
+    right: 0;
   }
 `;
 export const Contents = styled.div`
@@ -40,7 +49,7 @@ export const Contents = styled.div`
   }
 `;
 
-export const RepoContainer = styled.div`
+export const RepoContainer = styled(motion.div)`
   color: #fff;
   width: 85%;
   border-left: 0.5rem solid #1fd37c;

@@ -1,5 +1,5 @@
 https://altschool-github-profile.netlify.app
 https://altschool-github-profile.netlify.app/profile
-https://altschool-github-profile.netlify.app/profile/my-profile
+https://altschool-github-profile.netlify.app/profile/all-repo
 https://altschool-github-profile.netlify.app/search-profile
 https://altschool-github-profile.netlify.app/contact-me

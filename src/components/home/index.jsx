@@ -8,18 +8,35 @@ import {
   SearchLink,
 } from "./homeStyle";
 import bgImg from "../../assets/gif2.gif";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <Container>
       <Contents>
         <Text>
-          <h1>Welcome to GitHub Finder</h1>
-          <p>Search, Checkout and Explore Github Profiles.</p>
-          <div>
+          <motion.h1
+            animate={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            Welcome to GitHub Finder
+          </motion.h1>
+          <motion.p
+            animate={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            Search, Checkout and Explore Github Profiles.
+          </motion.p>
+          <motion.div
+            animate={{ scale: 1 }}
+            initial={{ scale: 0 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
             <Link to="/profile">View Profile</Link>
             <SearchLink to="/search-profile">Search Profile</SearchLink>
-          </div>
+          </motion.div>
         </Text>
         <Image>
           <img src={bgImg} alt="gif" />

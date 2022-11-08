@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   width: 100%;
@@ -12,7 +13,7 @@ export const Container = styled.section`
   & > img {
     max-width: 100%;
     position: absolute;
-    opacity: 0.1;
+    opacity: 0.08;
     animation: rotate 10s infinite;
     filter: blur(10px);
   }
@@ -71,7 +72,7 @@ export const Contents = styled.section`
   }
 `;
 
-export const Repos = styled.div`
+export const Repos = styled(motion.div)`
   width: 85%;
   border-left: 0.5rem solid #767676;
   padding-left: 3rem;
@@ -107,6 +108,10 @@ export const RepoCard = styled.div`
     top: 50%;
     left: -3rem;
     background-color: #767676;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.smobile}) {
+      top: 46%;
+    }
   }
 
   &::before {

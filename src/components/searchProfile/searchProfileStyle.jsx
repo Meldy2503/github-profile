@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import BgImg from "../../assets/search.png";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   width: 100%;
@@ -19,7 +20,7 @@ export const Contents = styled.div`
   }
 `;
 
-export const SearchWrapper = styled.div`
+export const SearchWrapper = styled(motion.div)`
   background: url(${BgImg}),
     linear-gradient(
       268.28deg,
@@ -97,7 +98,7 @@ export const SearchWrapper = styled.div`
   }
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled(motion.div)`
   margin: 8rem 0 15rem 0;
   display: flex;
   align-items: center;

@@ -11,6 +11,7 @@ import axios from "axios";
 import Loading from "../Loading";
 import Icon from "../../assets/star.svg";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const SingleRepo = () => {
   const [repos, setRepos] = useState([]);
@@ -41,9 +42,20 @@ const SingleRepo = () => {
   return (
     <Container>
       <img src={Icon} alt="icon" />
+      <img src={Icon} alt="icon" />
       <Contents>
-        <h2>{repos.name}</h2>
-        <RepoContainer>
+        <motion.h2
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
+          {repos.name}
+        </motion.h2>
+        <RepoContainer
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.8, duration: 1 }}
+        >
           {repos && (
             <RepoCard>
               <div>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   width: 100%;
@@ -20,7 +21,7 @@ export const Container = styled.section`
     max-width: 100%;
     position: absolute;
     animation: rotate 10s infinite;
-    opacity: 0.1;
+    opacity: 0.08;
     filter: blur(10px);
   }
 
@@ -66,7 +67,7 @@ export const Contents = styled.div`
     font-family: "Bakbak One", cursive;
   }
 `;
-export const Form = styled.form`
+export const Form = styled(motion.form)`
   width: 75%;
   margin: 0 auto;
 

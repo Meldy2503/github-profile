@@ -6,6 +6,7 @@ import axios from "axios";
 import Loading from "../Loading";
 import { Helmet } from "react-helmet-async";
 import Icon from "../../assets/star.svg";
+import { motion } from "framer-motion";
 
 import {
   Container,
@@ -56,8 +57,18 @@ const MyProfile = () => {
           <link rel="canonical" href="/profile" />
         </Helmet>
 
-        <h1>My GitHub Profile</h1>
-        <ProfileContents>
+        <motion.h1
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
+          My GitHub Profile
+        </motion.h1>
+        <ProfileContents
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 1, duration: 1.2 }}
+        >
           {data && (
             <ProfileCard>
               <img alt="avatar" src={data.avatar_url} />

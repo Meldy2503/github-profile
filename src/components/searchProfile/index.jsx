@@ -43,7 +43,11 @@ const SearchProfiles = () => {
           <meta name="description" content="Search A Profile on Github" />
           <link rel="canonical" href="/search-profile" />
         </Helmet>
-        <SearchWrapper>
+        <SearchWrapper
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: 0.2, duration: 1.2 }}
+        >
           <h1>GITHUB FINDER</h1>
           <p>Search for a GitHub Profile</p>
           <form>
@@ -61,7 +65,11 @@ const SearchProfiles = () => {
         </SearchWrapper>
 
         {/* USER LIST */}
-        <CardWrapper>
+        <CardWrapper
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          transition={{ delay: .8, duration: 1.2 }}
+        >
           {userSearch.map((user) => {
             return (
               <Card key={user.id}>
