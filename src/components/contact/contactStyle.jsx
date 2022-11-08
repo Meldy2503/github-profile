@@ -96,7 +96,7 @@ export const Form = styled(motion.form)`
     }
 
     &:focus {
-      border-bottom: 0.3rem solid #19c572;
+      border-bottom: 0.05rem solid #19c572;
     }
   }
 `;

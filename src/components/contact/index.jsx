@@ -18,15 +18,6 @@ const Contact = () => {
     console.log(formData);
   };
 
-  const handleSubmit = () => {
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-
-    console.log(formData);
-  };
   return (
     <Container>
       <img src={bgImg} alt="pattern" />
@@ -86,9 +77,7 @@ const Contact = () => {
             required
           ></textarea>
           <br />
-          <Btn type="submit" onClick={handleSubmit}>
-            SEND MESSAGE
-          </Btn>
+          <Btn type="submit">SEND MESSAGE</Btn>
         </Form>
       </Contents>
     </Container>
