@@ -47,9 +47,9 @@ const Contact = () => {
         </motion.h2>
 
         <Form
-          animate={{ scale: 1 }}
-          initial={{ scale: 0 }}
-          transition={{ delay: 1, duration: 1.2 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ delay: 1, duration: 1 }}
         >
           <label htmlFor="name">
             <input

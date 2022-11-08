@@ -3,7 +3,7 @@ import {
   Container,
   Contents,
   SearchWrapper,
-  CardWrapper,
+  SearchResult,
   Card,
   Text,
 } from "./searchProfileStyle";
@@ -44,9 +44,9 @@ const SearchProfiles = () => {
           <link rel="canonical" href="/search-profile" />
         </Helmet>
         <SearchWrapper
-          animate={{ scale: 1 }}
-          initial={{ scale: 0 }}
-          transition={{ delay: 0.2, duration: 1.2 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ duration: 1 }}
         >
           <h1>GITHUB FINDER</h1>
           <p>Search for a GitHub Profile</p>
@@ -65,10 +65,10 @@ const SearchProfiles = () => {
         </SearchWrapper>
 
         {/* USER LIST */}
-        <CardWrapper
-          animate={{ scale: 1 }}
-          initial={{ scale: 0 }}
-          transition={{ delay: .8, duration: 1.2 }}
+        <SearchResult
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ delay: 0.7, duration: 1 }}
         >
           {userSearch.map((user) => {
             return (
@@ -83,7 +83,7 @@ const SearchProfiles = () => {
               </Card>
             );
           })}
-        </CardWrapper>
+        </SearchResult>
       </Contents>
     </Container>
   );

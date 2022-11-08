@@ -98,7 +98,7 @@ export const SearchWrapper = styled(motion.div)`
   }
 `;
 
-export const CardWrapper = styled(motion.div)`
+export const SearchResult = styled(motion.div)`
   margin: 8rem 0 15rem 0;
   display: flex;
   align-items: center;

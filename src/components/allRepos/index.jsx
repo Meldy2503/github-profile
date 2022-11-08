@@ -79,9 +79,9 @@ const AllRepos = () => {
         {/* list of repositories */}
         <Repos
           ref={ref}
-          animate={{ scale: 1 }}
-          initial={{ scale: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ delay: 1, duration: 1 }}
         >
           <div>
             {repos?.slice(skip, skip + PER_PAGE).map((repo) => (
