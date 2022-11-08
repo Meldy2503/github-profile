@@ -21,12 +21,12 @@ export const Container = styled.section`
   }
 
   & > img:nth-child(1) {
+    top: 0;
     left: 0;
-    bottom: 0;
   }
 
   & > img:nth-child(2) {
-    top: 0;
+    bottom: 0;
     right: 0;
   }
 `;

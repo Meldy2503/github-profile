@@ -64,14 +64,14 @@ const AllRepos = () => {
         <motion.h1
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
-          transition={{ delay: 0.2, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
         >
           My Repositories
         </motion.h1>
         <motion.h2
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
         >
           ({repos.length})
         </motion.h2>
@@ -81,7 +81,7 @@ const AllRepos = () => {
           ref={ref}
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 1, duration: 0.7 }}
         >
           <div>
             {repos?.slice(skip, skip + PER_PAGE).map((repo) => (

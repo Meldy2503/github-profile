@@ -18,21 +18,21 @@ const Home = () => {
           <motion.h1
             animate={{ scale: 1 }}
             initial={{ scale: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.5, duration: 0.7 }}
           >
             Welcome to GitHub Finder
           </motion.h1>
           <motion.p
             animate={{ scale: 1 }}
             initial={{ scale: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 1, duration: 0.7 }}
           >
             Search, Checkout and Explore Github Profiles.
           </motion.p>
           <motion.div
             animate={{ scale: 1 }}
             initial={{ scale: 0 }}
-            transition={{ delay: 1.5, duration: 1 }}
+            transition={{ delay: 1.5, duration: 0.7 }}
           >
             <Link to="/profile">View Profile</Link>
             <SearchLink to="/search-profile">Search Profile</SearchLink>

@@ -47,14 +47,14 @@ const SingleRepo = () => {
         <motion.h2
           animate={{ scale: 1 }}
           initial={{ scale: 0 }}
-          transition={{ delay: 0.2, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
         >
           {repos.name}
         </motion.h2>
         <RepoContainer
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
         >
           {repos && (
             <RepoCard>

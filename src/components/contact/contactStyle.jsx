@@ -22,6 +22,7 @@ export const Container = styled.section`
     position: absolute;
     animation: rotate 10s infinite;
     opacity: 0.08;
+    z-index: 1;
     filter: blur(10px);
   }
 
@@ -32,21 +33,37 @@ export const Container = styled.section`
   }
 
   & > img:nth-child(1) {
-    width: 30rem;
     left: 0;
+    width: 13rem;
+    opacity: 0.15;
+    filter: blur(7px);
   }
 
   img:nth-child(2) {
-    width: 20rem;
+    width: 25rem;
     top: 0;
     right: 0;
-    margin: 0 auto;
   }
 
   img:nth-child(3) {
-    width: 30rem;
-    right: 0;
+    width: 25rem;
+    right: -8rem;
     bottom: 0;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      width: 10rem;
+      right: 0;
+      opacity: 0.15;
+      filter: blur(5px);
+    }
+  }
+
+  & > img:nth-child(4) {
+    left: 0;
+    bottom: 0;
+    width: 10rem;
+    opacity: 0.15;
+    filter: blur(7px);
   }
 `;
 
@@ -63,13 +80,14 @@ export const Contents = styled.div`
   h2 {
     line-height: 1.4;
     font-size: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     font-family: "Bakbak One", cursive;
   }
 `;
 export const Form = styled(motion.form)`
   width: 75%;
   margin: 0 auto;
+  z-index: 100;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 85%;
@@ -90,6 +108,18 @@ export const Form = styled(motion.form)`
     border: none;
     outline: none;
     color: #fff;
+    z-index: 100;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #444444 inset !important;
+      box-shadow: 0 0 0 30px #404140 inset !important;
+    }
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #fff !important;
+    }
 
     &::placeholder {
       color: #ffffffb2;

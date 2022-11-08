@@ -27,7 +27,7 @@ const ErrorTest = () => {
       }}
       animate={{ scale: 1 }}
       initial={{ scale: 0 }}
-      transition={{ delay: 0.2, duration: 0.8 }}
+      transition={{ delay: 0.2, duration: 0.7 }}
     >
       <h2>Click the button below to trigger an error</h2>
       <button

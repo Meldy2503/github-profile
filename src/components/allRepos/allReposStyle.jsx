@@ -35,9 +35,11 @@ export const Container = styled.section`
   }
 
   img:nth-child(3) {
-    width: 25rem;
     right: 0;
     bottom: 0;
+    width: 12rem;
+    opacity: 0.15;
+    filter: blur(7px);
   }
 
   img:nth-child(4) {
@@ -173,7 +175,7 @@ export const Links = styled(NavLink)`
 export const BtnWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10rem;
+  margin: 0 auto 10rem auto;
   gap: 1rem;
 
   span {
@@ -184,8 +186,8 @@ export const BtnWrapper = styled.div`
 export const Btn = styled.button`
   outline: none;
   border: none;
-  background-color: #21e786;
-  padding: 1rem 2rem;
+  background-color: #22d880;
+  padding: 0.5rem 1rem;
   font-size: 1.6rem;
   cursor: pointer;
   text-transform: uppercase;
@@ -193,8 +195,8 @@ export const Btn = styled.button`
 `;
 
 export const Nos = styled.div`
-  border: 0.2rem solid #21e786;
-  padding: 1rem 2rem;
+  border: 0.2rem solid #22d880;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
 `;
 

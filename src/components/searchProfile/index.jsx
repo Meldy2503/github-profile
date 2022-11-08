@@ -46,7 +46,7 @@ const SearchProfiles = () => {
         <SearchWrapper
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
         >
           <h1>GITHUB FINDER</h1>
           <p>Search for a GitHub Profile</p>
@@ -68,7 +68,7 @@ const SearchProfiles = () => {
         <SearchResult
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}
-          transition={{ delay: 0.7, duration: 1 }}
+          transition={{ delay: 0.7, duration: 0.7 }}
         >
           {userSearch.map((user) => {
             return (
