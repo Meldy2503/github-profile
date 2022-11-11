@@ -59,7 +59,7 @@ export const Text = styled.div`
 
 export const Link = styled(NavLink)`
   padding: 1.5rem 4.2rem;
-  background-color: #21e786;
+  background-color: #4afcb2;
   text-decoration: none;
   z-index: 100;
   color: #181717;
@@ -73,17 +73,16 @@ export const Link = styled(NavLink)`
   }
 `;
 
-
 export const SearchLink = styled(Link)`
   padding: 1.4rem 3rem;
   background-color: #040b11;
-  border: 0.2rem solid #21e786;
+  border: 0.2rem solid #4afcb2;
   color: #fff;
 
   &:hover {
     box-shadow: inset 20rem 0 #fff;
     border: 0.2rem solid #fff;
-    background-color: #21e786;
+    background-color: #4afcb2;
     color: #1f1e1e;
   }
 `;

@@ -22,6 +22,6 @@ export const Contents = styled.div`
   }
 
   span {
-    color: #1fd37c;
+    color: #4afcb2;
   }
 `;

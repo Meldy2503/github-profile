@@ -129,10 +129,10 @@ export const RepoCard = styled.div`
 
   &:hover {
     &::before {
-      background-color: #1fd37c;
+      background-color: #4afcb2;
     }
     &::after {
-      background-color: #1fd37c;
+      background-color: #4afcb2;
     }
   }
 
@@ -155,7 +155,7 @@ export const RepoCard = styled.div`
 `;
 
 export const Links = styled(NavLink)`
-  border: 0.2rem solid #21e786;
+  border: 0.2rem solid #4afcb2;
   padding: 1rem 2rem;
   border-radius: 1rem;
   color: #fff;
@@ -186,7 +186,7 @@ export const BtnWrapper = styled.div`
 export const Btn = styled.button`
   outline: none;
   border: none;
-  background-color: #22d880;
+  background-color: #4afcb2;
   padding: 0.5rem 1rem;
   font-size: 1.6rem;
   cursor: pointer;
@@ -195,7 +195,7 @@ export const Btn = styled.button`
 `;
 
 export const Nos = styled.div`
-  border: 0.2rem solid #22d880;
+  border: 0.2rem solid #4afcb2;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
 `;

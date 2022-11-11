@@ -76,14 +76,14 @@ export const RepoLink = styled(NavLink)`
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 1.1rem 1.8rem;
-  background-color: #4c58db;
+  background-color: #5c67dd;
 `;
 export const GitLink = styled.a`
   display: flex;
   align-items: center;
   column-gap: 0.7rem;
   border-radius: 0.5rem;
-  background-color: #21e786;
+  background-color: #4afcb2;
   text-decoration: none;
   padding: 1.1rem 1.8rem;
   color: #090909;
@@ -111,8 +111,8 @@ export const ProfileCard = styled.div`
   &::before,
   &::after {
     content: "";
-    height: 10rem;
-    width: 10rem;
+    height: 7rem;
+    width: 7rem;
     position: absolute;
     background-color: transparent;
     transition: transform 0.5s ease-in;
@@ -132,13 +132,13 @@ export const ProfileCard = styled.div`
     transform: scale(1.03);
 
     &::before {
-      border-right: 0.5rem solid #21e786;
-      border-bottom: 0.5rem solid #21e786;
+      border-right: 0.5rem solid #4afcb2;
+      border-bottom: 0.5rem solid #4afcb2;
       transform: scaleX(1);
     }
     &::after {
-      border-left: 0.5rem solid #21e786;
-      border-top: 0.5rem solid #21e786;
+      border-left: 0.5rem solid #4afcb2;
+      border-top: 0.5rem solid #4afcb2;
       transform: scaleX(1);
     }
   }

@@ -67,7 +67,7 @@ export const SearchWrapper = styled(motion.div)`
       font-family: "Mulish", sans-serif;
       width: 45rem;
       background-color: transparent;
-      border: 0.2rem solid #1fd37c;
+      border: 0.2rem solid #4afcb2;
       border-radius: 1rem;
       color: #fff;
       font-size: 1.7rem;
@@ -88,11 +88,11 @@ export const SearchWrapper = styled(motion.div)`
       font-weight: 700;
       text-transform: uppercase;
       line-height: 1.7;
-      background-color: #1fd37c;
+      background-color: #4afcb2;
       font-family: "Bakbak One", cursive;
 
       &:hover {
-        background-color: #18a761;
+        background-color: #39c58b;
       }
     }
   }
@@ -140,5 +140,10 @@ export const Text = styled.div`
     padding: 1.3rem 3rem;
     border-radius: 1rem;
     color: #fff;
+
+    &:hover {
+      border: 0.1rem solid #4afcb2;
+      color: #4afcb2;
+    }
   }
 `;

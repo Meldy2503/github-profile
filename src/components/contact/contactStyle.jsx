@@ -126,7 +126,7 @@ export const Form = styled(motion.form)`
     }
 
     &:focus {
-      border-bottom: 0.05rem solid #19c572;
+      border-bottom: 0.05rem solid #4afcb2;
     }
   }
 `;
@@ -138,7 +138,7 @@ export const Btn = styled.button`
   border: none;
   font-weight: 900;
   cursor: pointer;
-  background-color: #1fd37c;
+  background-color: #4afcb2;
 
   &:hover {
     background-color: #1bc472;

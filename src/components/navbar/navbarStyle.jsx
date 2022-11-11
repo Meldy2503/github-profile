@@ -36,12 +36,12 @@ export const Nav = styled.nav`
 export const LogoLink = styled(NavLink)`
   text-decoration: none;
   color: #fff;
-  border: 0.2rem solid #1fd37c;
+  border: 0.2rem solid #4afcb2;
   padding: 0 1rem;
   font-family: "Bakbak One", cursive;
 
   span {
-    color: #1fd37c;
+    color: #4afcb2;
     font-size: 3rem;
   }
 `;
@@ -123,7 +123,7 @@ export const Ul = styled.ul`
   }
 
   .active {
-    color: #1fd37c;
+    color: #4afcb2;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Bakbak One", cursive;

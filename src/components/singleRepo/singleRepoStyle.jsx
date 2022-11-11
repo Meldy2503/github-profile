@@ -52,7 +52,7 @@ export const Contents = styled.div`
 export const RepoContainer = styled(motion.div)`
   color: #fff;
   width: 85%;
-  border-left: 0.5rem solid #1fd37c;
+  border-left: 0.5rem solid #4afcb2;
   padding-left: 3rem;
   margin: 0 auto;
 
@@ -82,7 +82,7 @@ export const RepoCard = styled.div`
     position: absolute;
     top: 46%;
     left: -3rem;
-    background-color: #1fd37c;
+    background-color: #4afcb2;
   }
 
   &::before {
@@ -93,7 +93,7 @@ export const RepoCard = styled.div`
     border-radius: 50%;
     top: 43%;
     left: -4.5rem;
-    background-color: #1fd37c;
+    background-color: #4afcb2;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -140,7 +140,7 @@ export const Links = styled.span`
     text-decoration: none;
     color: #090909;
     padding: 1rem 2rem;
-    background-color: #1fd37c;
+    background-color: #4afcb2;
     font-family: "Bakbak One", cursive;
     transition: all 0.5s;
     display: flex;
@@ -153,7 +153,7 @@ export const Links = styled.span`
   }
 
   a:nth-child(1) {
-    border: 0.2rem solid #1fd37c;
+    border: 0.2rem solid #4afcb2;
     background-color: transparent;
     color: #fff;
 

@@ -33,7 +33,7 @@ const ErrorTest = () => {
       <button
         onClick={handleErrorTest}
         style={{
-          backgroundColor: "#1fd37c",
+          backgroundColor: "#4afcb2",
           padding: "1.3rem 2rem",
           color: "#090909",
           fontWeight: "600",
