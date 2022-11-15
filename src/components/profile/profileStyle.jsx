@@ -98,8 +98,8 @@ export const ProfileCard = styled.div`
   text-align: center;
   background-color: #141b22;
   position: relative;
-  width: 70%;
-  padding: 8rem 5rem;
+  width: 85%;
+  padding: 8rem 5rem 10rem 5rem;
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
@@ -144,20 +144,21 @@ export const ProfileCard = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.desktop}) {
-    padding: 8rem 3rem;
-    flex-direction: column;
+    padding: 5rem 2rem 10rem 2rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 80%;
+    width: 100%;
   }
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    padding: 6rem 3rem 8rem 3rem;
     width: 95%;
-    padding: 6rem 2rem;
+    flex-direction: column;
   }
   img {
     max-width: 100%;
-    width: 25rem;
+    object-fit: cover;
+    width: 28rem;
     border-radius: 50%;
     border: 1rem solid #040b11;
   }
@@ -193,7 +194,7 @@ export const Text = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 
     a {
       text-decoration: none;
